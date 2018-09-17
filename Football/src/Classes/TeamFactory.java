@@ -1,3 +1,4 @@
+package Classes;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -6,7 +7,7 @@ public class TeamFactory {
 	private Team team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, team11, team12, team13, team14, team15, team16;
 	private List<Team> teamList;
 	private List<Player> playerList1;
-	
+
 	public TeamFactory() {
 		team1 = new Team("Anderlecht", 100, playerList1);
 		team2 = new Team("Club Brugge", 100, playerList1);
@@ -24,7 +25,7 @@ public class TeamFactory {
 		team14 = new Team("Lokeren", 60, playerList1);
 		team15 = new Team("Waasland-Beveren", 60, playerList1);
 		team16 = new Team("Mouscron", 50, playerList1);	
-		
+
 		teamList = new ArrayList<Team>();
 		teamList.add(team1);
 		teamList.add(team2);
@@ -42,19 +43,19 @@ public class TeamFactory {
 		teamList.add(team14);
 		teamList.add(team15);
 		teamList.add(team16);	
-		
+
 		Collections.shuffle(teamList);
 	}
 
-	
+
 	public List<Team> getTeams(){
 		return teamList;
 	}
-	
+
 	public void showTeams() {
 		System.out.println(teamList);
 	}
-	
+
 	public static void main(String[] args) {
 		TeamFactory teams = new TeamFactory();
 		teams.showTeams();

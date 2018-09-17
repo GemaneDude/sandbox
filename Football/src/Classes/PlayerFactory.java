@@ -1,3 +1,4 @@
+package Classes;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -5,7 +6,7 @@ import java.util.List;
 public class PlayerFactory {
 	private Player player1, player2, player3, player4, player5, player6, player7, player8, player9, player10;
 	private List<Player> playerList1;
-	
+
 	public PlayerFactory() {
 		player1 = new Player("Alexis Saelemaekers", "LB");
 		player2 = new Player("Andy Najar", "RB");
@@ -17,7 +18,7 @@ public class PlayerFactory {
 		player8 = new Player("Pieter Gerkens", "CM");
 		player9 = new Player("Landry Dimata", "FW");
 		player10 = new Player("Ivan Santini", "FW");
-		
+
 		playerList1 = new ArrayList<Player>();
 		playerList1.add(player1);
 		playerList1.add(player2);
@@ -29,18 +30,18 @@ public class PlayerFactory {
 		playerList1.add(player8);
 		playerList1.add(player9);
 		playerList1.add(player10);
-		
+
 		Collections.shuffle(playerList1);
 	}
-	
+
 	public List<Player> getPlayerList1(){
 		return playerList1;
 	}
-	
+
 	public void showPlayerList1() {
 		System.out.println(playerList1);
 	}
-	
+
 	public static void main(String[] args) {
 		PlayerFactory players = new PlayerFactory();
 		players.showPlayerList1();
